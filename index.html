@@ -269,21 +269,31 @@ body {
   margin-bottom: 8px;
 }
 
+.cover-logo-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
 .cover-logo-img {
   width: clamp(200px, 40vw, 400px);
   height: auto;
-  margin-bottom: -50px;
+  display: block;
   filter: drop-shadow(0 0 30px var(--blue-glow));
 }
 
 .cover-sec {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: clamp(1.2rem, 3vw, 2rem);
   font-weight: 300;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   text-align: center;
   color: var(--blue-bright);
-  margin-bottom: 8px;
+  white-space: nowrap;
 }
 
 .cover-subtitle {
@@ -1373,8 +1383,10 @@ body {
 <!-- ==================== SLIDE 1: COVER ==================== -->
 <div class="slide slide-cover active" data-slide="0">
   <div class="slide-content" style="text-align: center;">
-    <img src="images/logo-liqi.png" alt="Liqi" class="cover-logo-img">
-    <div class="cover-sec">Securitizadora</div>
+    <div class="cover-logo-wrap">
+      <img src="images/logo-liqi.png" alt="Liqi" class="cover-logo-img">
+      <div class="cover-sec">Securitizadora</div>
+    </div>
     <div class="cover-subtitle">Tecnologia que conecta o mercado de capitais</div>
     <div class="cover-meta">
       <span>Apresenta&ccedil;&atilde;o Institucional 2026</span>
