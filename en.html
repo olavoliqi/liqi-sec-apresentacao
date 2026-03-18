@@ -1347,25 +1347,6 @@ body {
   .nav-dot.active { width: 18px; }
 }
 
-/* ==================== PRINT / PDF ==================== */
-@media print {
-  html { scroll-snap-type: none; }
-  body { overflow: visible; background: #0A0A0F; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .top-bar, .nav-bar { display: none !important; }
-  .slide {
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    page-break-after: always;
-    page-break-inside: avoid;
-    break-after: page;
-    break-inside: avoid;
-    scroll-snap-align: none;
-    overflow: hidden;
-  }
-  .slide:last-of-type { page-break-after: auto; }
-  .slide-label { position: absolute; }
-}
 </style>
 </head>
 <body>
@@ -1373,7 +1354,6 @@ body {
 <div class="top-bar">
   <a class="top-btn" href="index.html">PT</a>
   <a class="top-btn active-lang" href="en.html">EN</a>
-  <button class="top-btn" id="downloadPdf" onclick="generatePDF()">&#128196; PDF</button>
 </div>
 
 <!-- ==================== SLIDE 1: COVER ==================== -->
@@ -2038,11 +2018,6 @@ body {
 })();
 </script>
 
-<script>
-function generatePDF() {
-  window.print();
-}
-</script>
 
 </body>
 </html>
