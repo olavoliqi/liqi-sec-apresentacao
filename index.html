@@ -424,16 +424,16 @@ body {
 /* ==================== BIG NUMBERS ==================== */
 .stat-row {
   display: flex;
-  gap: 48px;
+  gap: 36px;
   justify-content: center;
-  margin: 32px 0;
+  margin: 16px 0;
   flex-wrap: wrap;
 }
 
 .stat-item { text-align: center; }
 
 .stat-number {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 900;
   color: var(--blue-bright);
   line-height: 1;
@@ -713,8 +713,27 @@ body {
 }
 
 .ai-hero-side {
-  width: 320px;
+  width: 340px;
   flex-shrink: 0;
+}
+
+.ai-header-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.ai-header-row img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.ai-header-info {
+  flex: 1;
 }
 
 .ai-name {
@@ -1069,8 +1088,8 @@ body {
 .contact-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 28px;
+  border-radius: 16px;
+  padding: 20px;
   display: inline-block;
   text-align: left;
   max-width: 320px;
@@ -1080,7 +1099,7 @@ body {
 }
 
 .contact-name {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 800;
   margin-bottom: 4px;
 }
@@ -1098,7 +1117,7 @@ body {
 }
 
 .contact-info li {
-  padding: 8px 0;
+  padding: 5px 0;
   border-bottom: 1px solid var(--border);
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -1234,15 +1253,15 @@ body {
 .biz-lines {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .biz-line {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 22px 18px;
+  border-radius: 12px;
+  padding: 14px 12px;
   text-align: center;
 }
 
@@ -1461,7 +1480,7 @@ body {
       </div>
     </div>
 
-    <div style="text-align: center; margin: 28px 0 8px;">
+    <div style="text-align: center; margin: 12px 0 4px;">
       <div style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); opacity: 0.7; margin-bottom: 16px;">Grupo Liqi &mdash; Todas as linhas de neg&oacute;cio</div>
     </div>
     <div class="stat-row" style="margin-top: 0;">
@@ -1731,8 +1750,13 @@ body {
     <div class="ai-hero">
       <div class="ai-hero-main">
         <div class="section-label">IA para Estrutura&ccedil;&atilde;o</div>
-        <div class="ai-name whitney">Whitney</div>
-        <div class="ai-tagline">Intelig&ecirc;ncia que organiza fluxos de estrutura&ccedil;&atilde;o 24/7</div>
+        <div class="ai-header-row">
+          <img src="images/lia.jpg" alt="Whitney" style="border: 3px solid var(--blue-bright); box-shadow: 0 0 20px var(--blue-glow);">
+          <div class="ai-header-info">
+            <div class="ai-name whitney">Whitney</div>
+            <div class="ai-tagline">Intelig&ecirc;ncia que organiza fluxos de estrutura&ccedil;&atilde;o 24/7</div>
+          </div>
+        </div>
 
         <ul class="ai-feature-list">
           <li><span class="ai-check">&#10003;</span>Monitora todas as comunica&ccedil;&otilde;es: emails, reuni&otilde;es, mensagens relacionadas &agrave;s opera&ccedil;&otilde;es</li>
@@ -1748,9 +1772,6 @@ body {
       </div>
 
       <div class="ai-hero-side">
-        <div style="text-align: center; margin-bottom: 8px;">
-          <img src="images/lia.jpg" alt="Whitney - Agente IA Liqi" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--blue-bright); box-shadow: 0 0 30px var(--blue-glow);">
-        </div>
         <div class="ai-chat-mock">
           <div class="ai-chat-header">
             <img src="images/lia.jpg" alt="Whitney" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
@@ -1791,8 +1812,13 @@ body {
     <div class="ai-hero">
       <div class="ai-hero-main">
         <div class="section-label">IA para o mercado</div>
-        <div class="ai-name lia">Lia</div>
-        <div class="ai-tagline">Sua especialista em emiss&otilde;es securitizadas. Dispon&iacute;vel 24/7 para qualquer participante do mercado.</div>
+        <div class="ai-header-row">
+          <img src="images/whitney.jpg" alt="Lia" style="border: 3px solid var(--purple-light); box-shadow: 0 0 20px var(--purple-glow);">
+          <div class="ai-header-info">
+            <div class="ai-name lia">Lia</div>
+            <div class="ai-tagline">Sua especialista em emiss&otilde;es securitizadas. Dispon&iacute;vel 24/7 para qualquer participante do mercado.</div>
+          </div>
+        </div>
 
         <ul class="ai-feature-list">
           <li><span class="ai-check">&#10003;</span>Acompanhamento em tempo real de CR, CRI, CRA e deb&ecirc;ntures</li>
@@ -1809,9 +1835,6 @@ body {
       </div>
 
       <div class="ai-hero-side">
-        <div style="text-align: center; margin-bottom: 8px;">
-          <img src="images/whitney.jpg" alt="Lia - Agente IA Liqi" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid var(--purple-light); box-shadow: 0 0 30px var(--purple-glow);">
-        </div>
         <div class="ai-chat-mock">
           <div class="ai-chat-header">
             <img src="images/whitney.jpg" alt="Lia" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
@@ -1903,7 +1926,7 @@ body {
   <span class="slide-label">Parceiros</span>
   <div class="slide-content">
     <div style="text-align: center;">
-      <img src="images/parceiros.png" alt="Empresas que utilizam as solu&ccedil;&otilde;es da Liqi" style="max-width: 100%; border-radius: 16px;">
+      <img src="images/parceiros.png" alt="Empresas que utilizam as solu&ccedil;&otilde;es da Liqi" style="max-width: 75%; border-radius: 16px;">
     </div>
   </div>
 </div>
@@ -1942,7 +1965,7 @@ body {
         </div>
       </div>
 
-      <div class="contact-social" style="margin-top: 32px;">
+      <div class="contact-social" style="margin-top: 16px;">
         <a class="social-link" href="#" title="LinkedIn">in</a>
         <a class="social-link" href="#" title="YouTube">YT</a>
         <a class="social-link" href="#" title="Instagram">IG</a>
