@@ -1346,6 +1346,26 @@ body {
   .nav-dot { width: 6px; height: 6px; }
   .nav-dot.active { width: 18px; }
 }
+
+/* ==================== PRINT / PDF ==================== */
+@media print {
+  html { scroll-snap-type: none; }
+  body { overflow: visible; background: #0A0A0F; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .top-bar, .nav-bar { display: none !important; }
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-after: page;
+    break-inside: avoid;
+    scroll-snap-align: none;
+    overflow: hidden;
+  }
+  .slide:last-of-type { page-break-after: auto; }
+  .slide-label { position: absolute; }
+}
 </style>
 </head>
 <body>
@@ -2018,33 +2038,9 @@ body {
 })();
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 function generatePDF() {
-  var btn = document.getElementById('downloadPdf');
-  btn.textContent = 'Generating...';
-  btn.disabled = true;
-
-  var topBar = document.querySelector('.top-bar');
-  var navBar = document.querySelector('.nav-bar');
-  topBar.style.display = 'none';
-  navBar.style.display = 'none';
-
-  var opt = {
-    margin: 0,
-    filename: 'Liqi_Securitizadora_2026.pdf',
-    image: { type: 'jpeg', quality: 0.95 },
-    html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-    jsPDF: { unit: 'in', format: [16, 9], orientation: 'landscape' },
-    pagebreak: { mode: ['css', 'legacy'], before: '.slide' }
-  };
-
-  html2pdf().set(opt).from(document.body).save().then(function() {
-    topBar.style.display = 'flex';
-    navBar.style.display = 'flex';
-    btn.innerHTML = '&#128196; PDF';
-    btn.disabled = false;
-  });
+  window.print();
 }
 </script>
 
